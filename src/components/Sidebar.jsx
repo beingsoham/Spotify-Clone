@@ -9,7 +9,7 @@ const Sidebar = () => {
   const { playlists, createPlaylist } = useContext(PlayerContext);
 
   return (
-    <div className='w-[25%] h-full p-2 hidden lg:flex flex-col gap-2 text-white'>
+    <div className='hidden lg:flex lg:w-[25%] h-full p-2 flex-col gap-2 text-white'>
 
       {/* Top Section */}
       <div className='bg-[#121212] rounded-lg p-4 flex flex-col gap-4'>

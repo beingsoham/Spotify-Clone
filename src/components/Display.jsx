@@ -35,7 +35,7 @@ const Display = () => {
   return (
     <div
       ref={displayRef}
-      className='w-full m-2 px-6 pt-4 rounded text-white overflow-auto lg:w-[75%] lg:ml-0'
+      className='flex-1 overflow-y-auto px-4 pt-4 lg:px-6 text-white'
     >
       <Routes>
         <Route path='/' element={<DisplayHome />} />

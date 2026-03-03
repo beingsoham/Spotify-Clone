@@ -1,22 +1,32 @@
-import React, { useContext }from 'react'
+import React, { useContext } from 'react'
 import Sidebar from './components/Sidebar'
 import Player from './components/Player'
 import Display from './components/Display'
 import { PlayerContext } from './context/PlayerContext'
 
-
 const App = () => {
 
-  const {audioRef, track} = useContext(PlayerContext);
+  const { audioRef } = useContext(PlayerContext);
 
   return (
-   <div className='h-screen bg-black'>
-      <div className='h-[90%] flex'>
+    <div className='h-screen bg-black flex flex-col'>
+
+      {/* Main Content */}
+      <div className='flex-1 flex flex-col lg:flex-row overflow-hidden'>
+
+        {/* Sidebar (hidden on mobile, visible on desktop) */}
         <Sidebar />
+
+        {/* Display Area */}
         <Display />
+
       </div>
-        <Player />
-        <audio ref={audioRef} preload="auto" />
+
+      {/* Player (always visible at bottom) */}
+      <Player />
+
+      <audio ref={audioRef} preload="auto" />
+
     </div>
   )
 }

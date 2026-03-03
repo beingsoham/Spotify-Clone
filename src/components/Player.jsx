@@ -26,7 +26,7 @@ const Player = () => {
   if (!track) return null;
 
   return (
-    <div className='h-[10%] bg-black flex justify-between items-center text-white px-4'>
+    <div className='bg-black text-white px-4 py-3 flex flex-col lg:flex-row items-center justify-between gap-4'>
 
       {/* LEFT SECTION */}
       <div className='hidden lg:flex items-center gap-4 min-w-[180px]'>
@@ -89,7 +89,7 @@ const Player = () => {
         </div>
 
         {/* SEEK BAR */}
-        <div className='flex items-center gap-3 w-[60vw] max-w-[550px]'>
+        <div className='flex items-center gap-3 w-[90vw] lg:w-[60vw] max-w-[550px]'>
 
           <p className='text-xs text-gray-400'>
             {time?.currentTime?.minute || 0}:
